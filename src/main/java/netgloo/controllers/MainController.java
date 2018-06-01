@@ -13,6 +13,12 @@ public class MainController {
     return "index.html";
   }
   
+  @RequestMapping("/example")
+  //@ResponseBody
+  public String example() {
+    return "index.html";
+  }
+  
   
   
 
