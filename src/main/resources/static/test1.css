@@ -1,0 +1,100 @@
+body {
+  background-color: lightgray;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-family: courier;
+}
+
+p {
+  color: black;
+}
+
+/*
+p#errorMsg {
+  color: red;
+}
+*/
+table#tab tr:nth-child(odd){
+  background-color: lightcyan;
+}
+
+table#tab tr:nth-child(even){
+  background-color: mistyrose;
+
+}
+
+.grp-con {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-top-style: dotted;
+  border-color: darkgray;
+}
+
+.err {
+  display: none;
+}
+
+.custombtns {
+  margin-bottom: 5px;
+  width: 35px;
+}
+
+.customEqual {
+  width: 74px;
+}
+
+.customDObtn {
+  margin-bottom: 5px;
+}
+
+.glyphicon {
+  font-size: 10px;
+}
+
+.sudtbl {
+  border: 3px solid black !important;
+  width: 300px;
+}
+
+.sudrow {
+  margin: 0px !important;
+  padding: 0px !important;
+  border: 0px !important;
+  border-collapse: collapse !important;
+}
+
+.sud {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid black;
+}
+
+.sudin {
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0; !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+  line-height: 2 !important;
+  text-align: center;
+}
+
+td.sud:first-child {
+  border-left: 1px solid black;
+}
+
+td.sud:nth-child(3n) {
+  border-right: 1px solid black;
+}
+
+tr.sudrow:first-child {
+  border-top: 1px solid black;
+}
+
+tr.sudrow:nth-child(3n) td{
+  border-bottom: 1px solid black;
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bowdoin College</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="test1.js"></script>
+  <link rel="stylesheet" href="test1.css">
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="page-header">
+    <h1><a href="PaymentSystemTest.html" style="color:black">Examples</a></h1>
+  </div>
+
+  <div class="col-md-12 grp-con">
+    <!-- Hello World Button -->
+    <div class="col-md-4">
+      <p id="demo">Hello</p>
+      <button type="button" onclick="helloWorld()">Click Here</button>
+    </div>
+
+    <!-- Change Number -->
+    <div class="col-md-4">
+      <p id="demo1">0</p>
+      <button type="button" onclick="changeNum()">Change Number</button>
+    </div>
+
+    <!-- Hide Message -->
+    <div class="col-md-4">
+      <p display="none" id="demo3">This message can be hidden.</p>
+      <button type="button" onclick="showMessage()">Hide/Show Message</button>
+    </div>
+  </div>
+
+
+  <!-- Addition Example -->
+  <div class="col-md-6">
+    <div class="col-md-12 grp-con">
+      <legend>Addition:</legend>
+      <input id="num1" type="text" name="firstnum">
+      + <input id="num2" type="text" name="secondnum">
+      = <input id="answer" type="text" name="done">
+      <button type="button" onclick="addition()">Answer</button>
+      <br><br>
+
+      <!-- error message for addition ex -->
+      <div id="error" class="panel panel-danger err">
+        <div class="panel-heading">
+          <p class="text-danger">Please enter a valid number.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input field for equation solver -->
+    <div class="col-md-12 grp-con">
+      <p>Input an equation using operators ( ), ^, *, /, +, -</p>
+      <input id="mathInput" type="text" name="math" placeholder="Type equation"> =
+      <input id="mathAns" type="text" name="math1">
+      <button id="solvebtn">Solve</button>
+      <br><br>
+
+      <!-- error message for equation solver -->
+      <div id="error2" class="panel panel-danger err">
+        <div class="panel-heading">
+          <p id="equationErr"class="text-danger">
+          Part of the equation is not valid.</p>
+        </div>
+      </div>
+      <br>
+
+      <!-- Calculator linked to equation solver -->
+      <button type="button" class="btn btn-primary customDObtn" id="clearbtn"><i class="glyphicon glyphicon-off"></i></button>
+      <button type="button" class="btn btn-primary custombtns">(</button>
+      <button type="button" class="btn btn-primary custombtns">)</button>
+      <button type="button" class="btn btn-primary custombtns">^</button><br>
+      <button type="button" class="btn btn-primary custombtns">7</button>
+      <button type="button" class="btn btn-primary custombtns">8</button>
+      <button type="button" class="btn btn-primary custombtns">9</button>
+      <button type="button" class="btn btn-primary custombtns">/</button><br>
+      <button type="button" class="btn btn-primary custombtns">4</button>
+      <button type="button" class="btn btn-primary custombtns">5</button>
+      <button type="button" class="btn btn-primary custombtns">6</button>
+      <button type="button" class="btn btn-primary custombtns">*</button><br>
+      <button type="button" class="btn btn-primary custombtns">1</button>
+      <button type="button" class="btn btn-primary custombtns">2</button>
+      <button type="button" class="btn btn-primary custombtns">3</button>
+      <button type="button" class="btn btn-primary custombtns">-</button><br>
+      <button type="button" class="btn btn-primary custombtns">0</button>
+      <button type="button" class="btn btn-primary customDObtn customEqual" id="equalbtn">=</button>
+      <button type="button" class="btn btn-primary custombtns">+</button>
+    </div>
+  </div>
+
+  <!-- Table that can be appended by the user -->
+  <div class="col-md-6">
+    <div class="col-md-12 grp-con">
+      <br>
+      <table id="tab" class="table table-bordered table-striped table-responsive">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Smith</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>Jane</td>
+          <td>Doe</td>
+          <td>40</td>
+        </tr>
+      </table>
+      <br>
+
+      <!-- Input fields for appending to table -->
+      <input id="fname" type="text" name="firstName" placeholder="First name">
+      <input id="lname" type="text" name="lastName" placeholder="Last name">
+      <input id="age" type="text" name="ageOf" placeholder="Age">
+      <br><br>
+      <button id="setRow">Add New Row</button>
+      <br><br>
+
+      <!-- error message for table entry -->
+      <div id="error1" class="panel panel-danger err">
+        <div class="panel-heading">
+          <p id="fieldError"class="text-danger"></p>
+        </div>
+      </div>
+
+      </body>
+    </div>
+    <div class="col-md-12 grp-con">
+      Palindrome: <input type="text" id="pali" name="Palindrome" placeholder="Enter Palindrome">
+      <button id="palibtn">Enter</button>
+      <p id="palians"></p>
+    </div>
+
+    <!-- *********************************************************************
+    **************************************************************************
+    This is the sudoku table layout
+    **************************************************************************
+    ***********************************************************************-->
+    <div class="col-md-12 grp-con">
+      <h2>Sudoku Solver:</h2>
+      <table class="table table-bordered table-condensed sudtbl">
+        <tbody>
+          <tr class="sudrow">
+            <td class="sud"><input id="00" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="10" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="20" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="30" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="40" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="50" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="60" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="70" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="80" type="text" maxlength="1" class="sudin"></td>
+          </tr>
+          <tr class="sudrow">
+            <td class="sud"><input id="01" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="11" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="21" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="31" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="41" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="51" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="61" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="71" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="81" type="text" maxlength="1" class="sudin"></td>
+          </tr>
+          <tr class="sudrow">
+            <td class="sud"><input id="02" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="12" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="22" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="32" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="42" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="52" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="62" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="72" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="82" type="text" maxlength="1" class="sudin"></td>
+          </tr>
+          <tr class="sudrow">
+            <td class="sud"><input id="03" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="13" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="23" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="33" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="43" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="53" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="63" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="73" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="83" type="text" maxlength="1" class="sudin"></td>
+          </tr>
+          <tr class="sudrow">
+            <td class="sud"><input id="04" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="14" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="24" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="34" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="44" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="54" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="64" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="74" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="84" type="text" maxlength="1" class="sudin"></td>
+          </tr>
+          <tr class="sudrow">
+            <td class="sud"><input id="05" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="15" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="25" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="35" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="45" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="55" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="65" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="75" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="85" type="text" maxlength="1" class="sudin"></td>
+          </tr>
+          <tr class="sudrow">
+            <td class="sud"><input id="06" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="16" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="26" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="36" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="46" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="56" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="66" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="76" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="86" type="text" maxlength="1" class="sudin"></td>
+          </tr>
+          <tr class="sudrow">
+            <td class="sud"><input id="07" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="17" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="27" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="37" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="47" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="57" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="67" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="77" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="87" type="text" maxlength="1" class="sudin"></td>
+          </tr>
+          <tr class="sudrow">
+            <td class="sud"><input id="08" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="18" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="28" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="38" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="48" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="58" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="68" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="78" type="text" maxlength="1" class="sudin"></td>
+            <td class="sud"><input id="88" type="text" maxlength="1" class="sudin"></td>
+          </tr>
+      </tbody>
+      </table>
+      <button class="btn btn-primary btn-md" id="sudbtn">Solver</button>
+      <button class="btn btn-primary btn-md" id="sudCheck">Checker</button>
+      <button class="btn btn-primary btn-md" id="sudClear">Clear</button><br><br>
+      <input type="file" id="sudfile" title=" " onchange="loadBoard(this.files)">
+      <br><br>
+
+      <!-- error and success messages for the user upon checking puzzle -->
+      <div id="sudError" class="panel panel-danger err">
+        <div class="panel-heading">
+          <p id="sudError1"class="text-danger">The puzzle is incorrect.</p>
+        </div>
+      </div>
+      <div id="sudSuccess" class="panel panel-success err">
+        <div class="panel-heading">
+          <p id="sudSuccess1"class="text-success">Congratulations, the puzzle is correct!</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</html>
